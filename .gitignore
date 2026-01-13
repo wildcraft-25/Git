@@ -1,0 +1,96 @@
+Experiment 1: Initialize Git Repository
+Aim: To create a Git repository and make the first commit.
+Copy code
+Bash
+git init
+touch hello.txt
+git add .
+git commit -m "Done Experiment 1"
+Result: Git repository initialized and first commit created.
+Experiment 2: Create Branch and Merge
+Aim: To create a branch and merge it with main.
+Copy code
+Bash
+git checkout -b newbranch
+touch index.html
+git add .
+git commit -m "2nd commit"
+git checkout main
+git merge newbranch
+Result: newbranch successfully merged into main.
+Experiment 3: Git Stash
+Aim: To temporarily save uncommitted changes.
+Copy code
+Bash
+touch style.css
+git add .
+git stash
+git stash pop
+Result: Changes were stashed and restored successfully.
+Experiment 4: Clone Repository
+Aim: To clone a remote Git repository.
+Copy code
+Bash
+git clone https://github.com/username/repository.git
+Result: Remote repository cloned to local system.
+Experiment 5: Fetch and Rebase
+Aim: To update local branch with remote changes.
+Copy code
+Bash
+git fetch origin
+git rebase origin/main
+Result: Local branch updated using rebase.
+Experiment 6: Branch & Merge (Repeat)
+Aim: To practice branch creation and merging.
+Copy code
+Bash
+git checkout -b newbranch
+touch file.txt
+git add .
+git commit -m "Branch commit"
+git checkout main
+git merge newbranch
+Result: Branch merged successfully.
+Experiment 7: Create Git Tag
+Aim: To create a tag for a specific commit.
+Copy code
+Bash
+git tag version1 15e487b
+Result: Tag created for the commit.
+Experiment 8: Cherry Pick
+Aim: To apply a specific commit from another branch.
+Copy code
+Bash
+git checkout newbranch
+# create commit
+git checkout main
+git cherry-pick 15e487b
+Result: Selected commit applied to main branch.
+Experiment 9: View Commit History
+Aim: To view commit details.
+Copy code
+Bash
+git log --oneline
+OR
+Copy code
+Bash
+git show <commit-id>
+Result: Commit history displayed.
+Experiment 10: Log by Author & Date
+Aim: To filter commits by author and date.
+Copy code
+Bash
+git log --author="JohnDoe"
+git log --author="JohnDoe" --since="2026-01-06" --until="2026-01-08"
+Result: Filtered commit logs displayed.
+Experiment 11: Show Last N Commits
+Aim: To display recent commits.
+Copy code
+Bash
+git log -n 5
+Result: Last 5 commits displayed.
+Experiment 12: Reset Commit
+Aim: To remove the last commit permanently.
+Copy code
+Bash
+git reset --hard HEAD~1
